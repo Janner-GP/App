@@ -1,0 +1,26 @@
+<div class="container mt-4 animated fadeIn">
+  <h1>Información detallada del héroe</h1>
+  <hr>
+
+  <div class="card mb-3" style="max-width: 100%;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img *ngIf="moment.tipo == 'imagen'" [src]="moment.img" [alt]="moment.fecha" class="img-fluid">
+        <video *ngIf="moment.tipo == 'video'"[src]="moment.img" autoplay="true" loop="true" class="img-fluid"></video>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h2 class="card-title text-center">{{moment.momento}}</h2>
+          <hr>
+          <p class="card-text">{{ moment.descripcion }}.</p>
+          <p class="card-text"><small class="text-muted">Fecha: {{ moment.fecha }}</small></p>
+          <div class="d-grid gap-2 mt-5">
+            <button (click)="Volver()" class="btn btn-outline-primary">Volver</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,23 @@
+<div class="container animated fadeIn fast">
+  <h1 class="m-4">Los Mejores Momentos De Mi Vida</h1>
+  <hr>
+
+  <div class="container-fluid row row-cols-1 row-cols-md-4 g-4">
+    <div class="col" *ngFor="let moment of moments; let i = index">
+
+      <div class="card h-100 border-dark mb-3 mt-4 fadeIn fast" style="width: 14rem;">
+
+        <img src="assets/img-website/adivina.png" class="card-img-top img-fluid" [alt]="moment.fecha">
+
+        <div class="card-header mt-3 bg-primary text-white">
+          <h3 class="card-title text-center">{{ moment.fecha }}</h3>
+        </div>
+
+        <div class="card-body text-center">
+          <h5 class="card-title">{{ moment.persona }}</h5>
+            <button (click)="VerMomento(i)" class="btn btn-outline-primary">¿Lo recuerdas?</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
